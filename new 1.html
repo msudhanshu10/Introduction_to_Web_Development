@@ -2,9 +2,33 @@
 <html>
 <head>
 <title>My first Dynamic Webpage.</title>
-</head>
+<script type="text/javascript">
+function addparagraphText()
+{
+  document.getElementById("para1").innerHTML="Thanks for adding text.";
+}
+</script>
+<script type="text/javascript">
+function addColor_to_text()
+{
+  var input=document.getElementById("name").value;
+  if(input.length==0)
+  document.getElementById("para2").innerHTML="Hey! You didn't entered any text.";
+  else
+    document.getElementById("para2").innerHTML=input;
+}
+</script>
 
+</head>
 <body>
-<p>Hello World!</p>
+  <H1 style="color:red">Let's see a button</H1>
+  <p style="color:grey"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/200px-BITS_Pilani-Logo.svg.png" width="150" height="150"><br>Welcome all.<br>This is Sudhanshu Mishra pursuing Msc, Biological Science from BITS Pilani.<br>This is my first webpage.<br>My ID is 2019B1PS0750P.</p>
+  <p style="color:magenta;">The following link will take you to my GitHub account.<br>GitHub is an open source platform for developers.</p>
+    <br>
+  <button onclick="addparagraphText();">Click me</button>
+<p id="para1"></p>
+<input id="name" type="text"/>
+<button onclick="addColor_to_text();" style="color:brown">Color it</button>
+<p id="para2" style="color:blue"></p>
 </body>
-</html>
+</html
